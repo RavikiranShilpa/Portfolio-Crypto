@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shilpa Angadi | Protocol Engineer</title>
+  <title>Shilpa Angadi | Data Scientist & On-Chain Analyst</title>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -87,11 +87,6 @@
 
     @keyframes slideInLeft {
       from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes slideInRight {
-      from { opacity: 0; transform: translateX(30px); }
       to { opacity: 1; transform: translateX(0); }
     }
 
@@ -195,10 +190,6 @@
       }
     }
 
-    @keyframes blink {
-      50% { opacity: 0.4; }
-    }
-
     .bio {
       color: var(--dim);
       margin-top: 16px;
@@ -234,10 +225,10 @@
       box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
     }
 
-    /* Ethics Banner */
-    .ethics-banner {
-      background: linear-gradient(135deg, rgba(5, 150, 105, 0.05), rgba(5, 150, 105, 0.1));
-      border: 2px solid var(--green);
+    /* Transition Banner */
+    .transition-banner {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(37, 99, 235, 0.1));
+      border: 2px solid var(--accent);
       border-radius: 16px;
       padding: 24px 28px;
       margin-bottom: 40px;
@@ -246,20 +237,9 @@
       overflow: hidden;
     }
 
-    .ethics-banner::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, rgba(5, 150, 105, 0.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .ethics-title {
+    .transition-title {
       font-weight: 700;
-      color: var(--green);
+      color: var(--accent);
       margin-bottom: 10px;
       display: flex;
       align-items: center;
@@ -267,20 +247,19 @@
       font-size: 14px;
     }
 
-    .ethics-title svg {
+    .transition-title svg {
       width: 20px;
       height: 20px;
-      fill: var(--green);
+      fill: var(--accent);
     }
 
-    .ethics-text {
+    .transition-text {
       color: var(--dim);
       font-size: 12px;
       line-height: 1.8;
-      position: relative;
     }
 
-    .ethics-text strong {
+    .transition-text strong {
       color: var(--text);
     }
 
@@ -301,24 +280,6 @@
       transition: all 0.3s;
       animation: scaleIn 0.6s ease both;
       box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .stat-item::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--green));
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .stat-item:hover::before {
-      opacity: 1;
     }
 
     .stat-item:nth-child(1) { animation-delay: 0.1s; }
@@ -356,7 +317,6 @@
       overflow: hidden;
       margin-bottom: 40px;
       animation: slideInLeft 0.8s ease 0.3s both;
-      transition: transform 0.3s, box-shadow 0.3s;
       box-shadow: 0 10px 40px rgba(0,0,0,0.15);
     }
 
@@ -461,10 +421,6 @@
     .project-card:nth-child(2) { animation-delay: 0.15s; }
     .project-card:nth-child(3) { animation-delay: 0.2s; }
     .project-card:nth-child(4) { animation-delay: 0.25s; }
-    .project-card:nth-child(5) { animation-delay: 0.3s; }
-    .project-card:nth-child(6) { animation-delay: 0.35s; }
-    .project-card:nth-child(7) { animation-delay: 0.4s; }
-    .project-card:nth-child(8) { animation-delay: 0.45s; }
 
     .project-card:hover {
       transform: translateY(-8px) scale(1.01);
@@ -497,7 +453,7 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 18px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s;
     }
 
     .project-icon svg {
@@ -508,17 +464,8 @@
 
     .project-card:hover .project-icon {
       transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
-    .project-icon.sol { 
-      background: linear-gradient(135deg, #9945FF, #14F195); 
-      box-shadow: 0 4px 15px rgba(153, 69, 255, 0.3);
-    }
-    .project-icon.eth { 
-      background: linear-gradient(135deg, #627eea, #8b9cf6); 
-      box-shadow: 0 4px 15px rgba(98, 126, 234, 0.3);
-    }
     .project-icon.data { 
       background: linear-gradient(135deg, #f59e0b, #ef4444); 
       box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
@@ -526,6 +473,10 @@
     .project-icon.tools { 
       background: linear-gradient(135deg, #06b6d4, #3b82f6); 
       box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+    }
+    .project-icon.eth { 
+      background: linear-gradient(135deg, #627eea, #8b9cf6); 
+      box-shadow: 0 4px 15px rgba(98, 126, 234, 0.3);
     }
 
     .project-title {
@@ -552,19 +503,14 @@
       line-height: 1.8;
     }
 
-    .project-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    .project-status {
       font-size: 11px;
-    }
-
-    .metric {
       color: var(--green);
       font-weight: 600;
       padding: 4px 10px;
       background: rgba(5, 150, 105, 0.08);
       border-radius: 6px;
+      display: inline-block;
     }
 
     /* Why Me Section */
@@ -576,11 +522,6 @@
       margin-bottom: 40px;
       animation: fadeInUp 0.8s ease 0.3s both;
       box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    }
-
-    .why-me h3 {
-      font-size: 14px;
-      margin-bottom: 16px;
     }
 
     .why-list {
@@ -629,24 +570,6 @@
       transition: all 0.4s;
       animation: scaleIn 0.6s ease both;
       box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .skill-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--green));
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .skill-card:hover::before {
-      opacity: 1;
     }
 
     .skill-card:nth-child(1) { animation-delay: 0.1s; }
@@ -678,17 +601,14 @@
 
     .skill-card:nth-child(1) .skill-icon-wrap { 
       background: linear-gradient(135deg, var(--accent), #60a5fa);
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
       animation-delay: 0s; 
     }
     .skill-card:nth-child(2) .skill-icon-wrap { 
-      background: linear-gradient(135deg, #9945FF, #14F195);
-      box-shadow: 0 6px 20px rgba(153, 69, 255, 0.3);
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
       animation-delay: 0.3s; 
     }
     .skill-card:nth-child(3) .skill-icon-wrap { 
       background: linear-gradient(135deg, var(--green), #34d399);
-      box-shadow: 0 6px 20px rgba(5, 150, 105, 0.3);
       animation-delay: 0.6s; 
     }
 
@@ -709,33 +629,6 @@
       line-height: 1.8;
     }
 
-    /* Code Block */
-    .code-block {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 40px;
-      overflow-x: auto;
-      font-size: 12px;
-      animation: fadeIn 0.8s ease 0.3s both;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-      color: #e2e8f0;
-      white-space: pre-wrap;
-      font-family: 'JetBrains Mono', monospace;
-      line-height: 1.8;
-    }
-
-    .code-block:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 50px rgba(0,0,0,0.2);
-    }
-
-    .code-comment { color: #64748b; }
-    .code-keyword { color: #c084fc; }
-    .code-string { color: #4ade80; }
-    .code-func { color: #60a5fa; }
-
     /* CTA */
     .cta {
       text-align: center;
@@ -744,35 +637,16 @@
       border-radius: 20px;
       border: 1px solid var(--border);
       animation: fadeInUp 0.8s ease 0.4s both;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 200px;
-      height: 200px;
-      background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
-      pointer-events: none;
     }
 
     .cta h3 {
       font-size: 22px;
       margin-bottom: 12px;
-      position: relative;
     }
 
     .cta p {
       color: var(--dim);
       margin-bottom: 28px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
     }
 
     .cta-btn {
@@ -785,7 +659,6 @@
       font-weight: 600;
       transition: all 0.3s;
       box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
-      position: relative;
     }
 
     .cta-btn:hover {
@@ -801,7 +674,6 @@
       border-top: 1px solid var(--border);
       color: var(--dim);
       font-size: 11px;
-      animation: fadeIn 1s ease 0.5s both;
     }
 
     /* Responsive */
@@ -824,56 +696,52 @@
     <h1 class="name">Shilpa Angadi</h1>
     <p class="tagline">
       <span class="rotating-text">
-        <span class="rotate-item">building the onchain future</span>
-        <span class="rotate-item">shipping secure smart contracts</span>
-        <span class="rotate-item">analyzing MEV & on-chain data</span>
-        <span class="rotate-item">solidity · rust · anchor</span>
-        <span class="rotate-item">0 exploits, 52 contracts</span>
+        <span class="rotate-item">data scientist → crypto</span>
+        <span class="rotate-item">building on-chain analytics</span>
+        <span class="rotate-item">learning solidity & rust</span>
+        <span class="rotate-item">python · sql · ml · web3</span>
+        <span class="rotate-item">10+ years in data</span>
       </span>
     </p>
     <p class="bio">
-      10 years in data science. Now I ship smart contracts, build protocols, and analyze on-chain data. 
-      Solidity, Rust, Solana, EVM. I read code. I build things that work.
+      Senior Data Scientist with 10+ years in ML and analytics. Now focused on blockchain — building on-chain analytics tools, learning smart contract development, and applying data science to DeFi. 
     </p>
     <div class="links">
       <a href="https://github.com/RavikiranShilpa">GitHub</a>
       <a href="https://www.linkedin.com/in/shilpa-443b3516b/">LinkedIn</a>
-      <a href="https://dune.com/">Dune</a>
       <a href="mailto:shilpa.rpns@gmail.com">Email</a>
     </div>
   </header>
 
-  <!-- Ethics Banner -->
-  <div class="ethics-banner">
-    <div class="ethics-title">
-      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-      Ethics Matter
+  <!-- Transition Banner -->
+  <div class="transition-banner">
+    <div class="transition-title">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      Why I'm Moving to Crypto
     </div>
-    <div class="ethics-text">
-      <strong>No rugs. No scams. No shady tokenomics.</strong> I've turned down projects with sketchy vesting, hidden mints, and "temporary" admin keys. 
-      I believe crypto wins when we build things people can actually trust. Security audits aren't optional. Transparency isn't marketing—it's the baseline. 
-      If your project needs to hide how it works, I'm not your dev.
+    <div class="transition-text">
+      <strong>10 years of data science taught me how to analyze complex systems.</strong> Now I'm applying that to blockchain — where the data is public, the stakes are real, and there's actual innovation happening. 
+      I bring quantitative rigor, engineering discipline, and a lot of curiosity. Learning Solidity and Rust. Building analytics tools. Ready to contribute.
     </div>
   </div>
-
 
   <!-- Stats -->
   <div class="stats-bar">
     <div class="stat-item">
-      <div class="stat-num">$8.2M</div>
-      <div class="stat-label">TVL Secured</div>
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Years Experience</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">52</div>
-      <div class="stat-label">Contracts Shipped</div>
+      <div class="stat-num">ML</div>
+      <div class="stat-label">Background</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">6</div>
-      <div class="stat-label">Chains</div>
+      <div class="stat-num">1TB+</div>
+      <div class="stat-label">Data Processed</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">0</div>
-      <div class="stat-label">Exploits</div>
+      <div class="stat-num">AWS</div>
+      <div class="stat-label">Certified</div>
     </div>
   </div>
 
@@ -889,19 +757,19 @@
         <span class="terminal-prompt">shilpa@crypto</span>:<span class="terminal-cmd">~$ whoami</span>
       </div>
       <div class="terminal-line terminal-output">
-        protocol engineer | on-chain analyst | 10yr data background
+        data scientist | on-chain analyst | learning smart contracts
       </div>
       <div class="terminal-line">
         <span class="terminal-prompt">shilpa@crypto</span>:<span class="terminal-cmd">~$ cat skills.txt</span>
       </div>
       <div class="terminal-line terminal-output">
-        <span class="terminal-highlight">Solidity</span> · <span class="terminal-highlight">Rust</span> · <span class="terminal-highlight">Anchor</span> · Foundry · Yul · Python · Dune
+        <span class="terminal-highlight">Python</span> · <span class="terminal-highlight">SQL</span> · Pandas · ML · Dune · Web3.py · <span class="terminal-highlight">Solidity (learning)</span>
       </div>
       <div class="terminal-line">
-        <span class="terminal-prompt">shilpa@crypto</span>:<span class="terminal-cmd">~$ echo $PRINCIPLES</span>
+        <span class="terminal-prompt">shilpa@crypto</span>:<span class="terminal-cmd">~$ echo $FOCUS</span>
       </div>
       <div class="terminal-line terminal-output">
-        audit everything · no backdoors · users first · ship it right
+        on-chain analytics · MEV research · DeFi risk analysis · smart contracts
       </div>
       <div class="terminal-line">
         <span class="terminal-prompt">shilpa@crypto</span>:<span class="terminal-cmd">~$ _</span>
@@ -910,135 +778,55 @@
   </div>
 
   <!-- Projects -->
-  <h2>What I've Built</h2>
+  <h2>What I'm Building</h2>
   <div class="projects-grid">
-
-    <div class="project-card">
-      <div class="project-icon sol">
-        <svg viewBox="0 0 24 24"><path d="M17.71 6.55l-11.6-.03a.76.76 0 0 0-.53.22l-1.5 1.55a.31.31 0 0 0 .22.53l11.6.03a.76.76 0 0 0 .53-.22l1.5-1.55a.31.31 0 0 0-.22-.53zm-11.6 4.72a.76.76 0 0 0-.53.22l-1.5 1.55a.31.31 0 0 0 .22.53l11.6.03a.76.76 0 0 0 .53-.22l1.5-1.55a.31.31 0 0 0-.22-.53l-11.6-.03zm0 4.72a.76.76 0 0 0-.53.22l-1.5 1.55a.31.31 0 0 0 .22.53l11.6.03a.76.76 0 0 0 .53-.22l1.5-1.55a.31.31 0 0 0-.22-.53l-11.6-.03z"/></svg>
-      </div>
-      <h3 class="project-title">Solana Perps DEX</h3>
-      <span class="project-chain">Solana · Rust · Anchor</span>
-      <p class="project-desc">
-        Built the matching engine from scratch. 20ms order execution. Custom oracle that aggregates Pyth + Switchboard for manipulation resistance. Liquidation engine processes 400+ positions per slot without congestion.
-      </p>
-      <div class="project-metrics">
-        <span class="metric">$1.8M daily vol</span>
-        <span class="metric">20ms latency</span>
-        <span class="metric">0 liquidation failures</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-icon eth">
-        <svg viewBox="0 0 24 24"><path d="M12 1.5l-8 13.1L12 18.7l8-4.1L12 1.5zm0 18.4l-8-4.9L12 22.5l8-7.5-8 4.9z"/></svg>
-      </div>
-      <h3 class="project-title">Prediction Market Protocol</h3>
-      <span class="project-chain">Arbitrum · Solidity · UMA</span>
-      <p class="project-desc">
-        Polymarket-style but permissionless. LMSR pricing for accurate odds. UMA optimistic oracle for dispute resolution. Conditional tokens with proper ERC-1155 accounting. Gas optimized—89k for market creation.
-      </p>
-      <div class="project-metrics">
-        <span class="metric">$2.1M TVL</span>
-        <span class="metric">8,400+ markets</span>
-        <span class="metric">99.4% resolution accuracy</span>
-      </div>
-    </div>
 
     <div class="project-card">
       <div class="project-icon data">
         <svg viewBox="0 0 24 24"><path d="M3 13h2v8H3v-8zm6-4h2v12H9V9zm6-3h2v15h-2V6zm6 7h2v8h-2v-8z"/></svg>
       </div>
-      <h3 class="project-title">MEV Detection Pipeline</h3>
-      <span class="project-chain">Ethereum · Python · Dune</span>
+      <h3 class="project-title">MEV Analysis Dashboard</h3>
+      <span class="project-chain">Python · Dune · SQL</span>
       <p class="project-desc">
-        Parses transaction traces to classify sandwich attacks, atomic arb, and liquidations. XGBoost model trained on labeled MEV—96.2% precision. Runs against Flashbots relay data in real-time.
+        Analytics pipeline to detect and classify MEV transactions — sandwich attacks, arbitrage, liquidations. Uses transaction trace parsing and ML classification.
       </p>
-      <div class="project-metrics">
-        <span class="metric">18M txns analyzed</span>
-        <span class="metric">$124M MEV tracked</span>
-        <span class="metric">used by 3 protocols</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-icon eth">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-      </div>
-      <h3 class="project-title">Concentrated Liquidity AMM</h3>
-      <span class="project-chain">Base · Solidity · Yul</span>
-      <p class="project-desc">
-        Uniswap V3 style with custom tick spacing. Position NFTs, multi-hop router, flash loans. Rewrote hot paths in Yul—38% gas reduction on swaps. Passed audit with 0 critical/high findings.
-      </p>
-      <div class="project-metrics">
-        <span class="metric">$3.2M volume</span>
-        <span class="metric">38% cheaper swaps</span>
-        <span class="metric">audited</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-icon sol">
-        <svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
-      </div>
-      <h3 class="project-title">Token-2022 Launchpad</h3>
-      <span class="project-chain">Solana · Rust · Jupiter</span>
-      <p class="project-desc">
-        Fair launch platform using Token-2022 extensions. Transfer hooks block sniping bots. Dutch auction with configurable decay curves. Zero successful bot attacks across 7 token launches.
-      </p>
-      <div class="project-metrics">
-        <span class="metric">$4.2M raised</span>
-        <span class="metric">7 successful TGEs</span>
-        <span class="metric">0 bot exploits</span>
-      </div>
+      <span class="project-status">Building</span>
     </div>
 
     <div class="project-card">
       <div class="project-icon tools">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
       </div>
-      <h3 class="project-title">Liquidation Keeper</h3>
-      <span class="project-chain">ETH + L2s · Python · Flashbots</span>
+      <h3 class="project-title">Whale Wallet Tracker</h3>
+      <span class="project-chain">Python · The Graph · PostgreSQL</span>
       <p class="project-desc">
-        Watches health factors across Aave, Compound, Maker. Flash loans for capital efficiency. Flashbots bundles to avoid gas wars and failed txns. Consistently profitable since launch.
+        On-chain monitoring tool tracking large wallet movements across DeFi protocols. Alerts on significant token transfers and LP position changes.
       </p>
-      <div class="project-metrics">
-        <span class="metric">1,847 liquidations</span>
-        <span class="metric">$520K volume</span>
-        <span class="metric">net profitable</span>
-      </div>
+      <span class="project-status">Building</span>
     </div>
 
     <div class="project-card">
       <div class="project-icon data">
         <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
       </div>
-      <h3 class="project-title">Bridge Security Monitor</h3>
-      <span class="project-chain">Multi-chain · TimescaleDB · Python</span>
+      <h3 class="project-title">DeFi Risk Analysis Tool</h3>
+      <span class="project-chain">Python · Web3.py · Pandas</span>
       <p class="project-desc">
-        Tracks 8 major bridges for anomalies: TVL drops, admin key usage, upgrade events. Caught 2 incidents before public disclosure. Alerts in under 30 seconds.
+        Analyzes smart contract risk factors: TVL concentration, admin key patterns, upgrade history, token distribution. ML-based risk scoring.
       </p>
-      <div class="project-metrics">
-        <span class="metric">$2.8B TVL monitored</span>
-        <span class="metric">99.97% uptime</span>
-        <span class="metric">2 incidents flagged early</span>
-      </div>
+      <span class="project-status">Building</span>
     </div>
 
     <div class="project-card">
-      <div class="project-icon tools">
-        <svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.92 6-4.72 7.28L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.94 2.55 2 6.81 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5v-5l-2.28 2.28C6.92 18 5 15.21 5 12c0-4.08 3.05-7.44 7-7.93V2.05z"/></svg>
+      <div class="project-icon eth">
+        <svg viewBox="0 0 24 24"><path d="M12 1.5l-8 13.1L12 18.7l8-4.1L12 1.5zm0 18.4l-8-4.9L12 22.5l8-7.5-8 4.9z"/></svg>
       </div>
-      <h3 class="project-title">Gas Optimization Patterns</h3>
-      <span class="project-chain">EVM · Solidity · Yul</span>
+      <h3 class="project-title">Simple Token Contract</h3>
+      <span class="project-chain">Solidity · Foundry · Testnet</span>
       <p class="project-desc">
-        Open source library of gas patterns. Storage packing, assembly optimizations, unchecked math where safe. Benchmarked against OpenZeppelin and Solmate. Used by 14 production protocols.
+        Learning project: ERC-20 token with basic features. Deployed on testnet, verified on Etherscan. Building toward more complex DeFi contracts.
       </p>
-      <div class="project-metrics">
-        <span class="metric">420 GitHub stars</span>
-        <span class="metric">14 protocols using</span>
-        <span class="metric">25-55% gas savings</span>
-      </div>
+      <span class="project-status">Learning</span>
     </div>
 
   </div>
@@ -1047,28 +835,14 @@
   <h2>Why Work With Me</h2>
   <div class="why-me">
     <ul class="why-list">
-      <li><strong>I've shipped.</strong> 52 contracts on mainnet. Not testnets, not "coming soon"—actual production code securing real money.</li>
-      <li><strong>I read before I write.</strong> 10 years of data analysis means I understand systems before I build them. I've read more protocol code than most.</li>
-      <li><strong>Security is default.</strong> Every contract gets fuzzed. I use Slither, Mythril, manual review. I've never shipped an exploitable bug.</li>
-      <li><strong>I say no.</strong> Turned down projects with bad tokenomics, hidden admin functions, or "move fast and break things" attitudes toward user funds.</li>
-      <li><strong>I know what companies actually need.</strong> Not just code—monitoring, documentation, incident response plans, upgrade paths.</li>
-      <li><strong>Data background = edge.</strong> I can query Dune, build dashboards, analyze on-chain behavior. Most devs can't.</li>
+      <li><strong>10+ years of real experience.</strong> Not tutorials — actual production systems processing terabytes of data, ML models in production, analytics that drove decisions.</li>
+      <li><strong>I learn fast.</strong> Picked up new domains throughout my career. Now applying that to blockchain — already building analytics tools, learning Solidity.</li>
+      <li><strong>Quantitative rigor.</strong> Data science background means I understand stats, risk, and how to validate assumptions. Most crypto devs don't have this.</li>
+      <li><strong>On-chain analytics is my edge.</strong> Dune dashboards, transaction analysis, wallet tracking — this is where data science meets crypto, and I'm building here.</li>
+      <li><strong>I ship.</strong> Check my work history — consistent delivery at multiple companies. I don't just learn, I build things that work.</li>
+      <li><strong>Honest about where I am.</strong> Learning smart contracts, building analytics. Not pretending to be a senior Solidity dev — but I'm getting there.</li>
     </ul>
   </div>
-
-  <!-- What Crypto Needs -->
-  <h2>What I Care About</h2>
-  <pre class="code-block"><span class="code-comment">// The problems worth solving</span>
-
-<span class="code-keyword">const</span> <span class="code-func">priorities</span> = {
-  security: <span class="code-string">"users shouldn't lose funds to preventable bugs"</span>,
-  transparency: <span class="code-string">"if you can't verify it, don't trust it"</span>,
-  ux: <span class="code-string">"crypto is too hard to use, we can fix that"</span>,
-  infrastructure: <span class="code-string">"oracles, bridges, sequencers—boring but critical"</span>,
-  sustainability: <span class="code-string">"yield should come from somewhere real"</span>
-};
-
-<span class="code-comment">// I build with these in mind</span></pre>
 
   <!-- Skills -->
   <h2>Stack</h2>
@@ -1077,29 +851,29 @@
       <div class="skill-icon-wrap">
         <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
       </div>
-      <div class="skill-title">Smart Contracts</div>
-      <div class="skill-list">Solidity · Rust · Anchor · Yul · Foundry · Hardhat</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M17.71 6.55l-11.6-.03a.76.76 0 0 0-.53.22l-1.5 1.55a.31.31 0 0 0 .22.53l11.6.03a.76.76 0 0 0 .53-.22l1.5-1.55a.31.31 0 0 0-.22-.53zm-11.6 4.72a.76.76 0 0 0-.53.22l-1.5 1.55a.31.31 0 0 0 .22.53l11.6.03a.76.76 0 0 0 .53-.22l1.5-1.55a.31.31 0 0 0-.22-.53l-11.6-.03zm0 4.72a.76.76 0 0 0-.53.22l-1.5 1.55a.31.31 0 0 0 .22.53l11.6.03a.76.76 0 0 0 .53-.22l1.5-1.55a.31.31 0 0 0-.22-.53l-11.6-.03z"/></svg>
-      </div>
-      <div class="skill-title">Chains</div>
-      <div class="skill-list">Ethereum · Solana · Arbitrum · Base · Optimism · Polygon</div>
+      <div class="skill-title">Data / ML</div>
+      <div class="skill-list">Python · SQL · Pandas · Scikit-learn · XGBoost · PyTorch</div>
     </div>
     <div class="skill-card">
       <div class="skill-icon-wrap">
         <svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
       </div>
-      <div class="skill-title">Analytics</div>
-      <div class="skill-list">Dune · The Graph · Python · SQL · MEV · Flashbots</div>
+      <div class="skill-title">On-Chain Analytics</div>
+      <div class="skill-list">Dune · The Graph · Web3.py · Etherscan · SQL</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon-wrap">
+        <svg viewBox="0 0 24 24"><path d="M12 1.5l-8 13.1L12 18.7l8-4.1L12 1.5zm0 18.4l-8-4.9L12 22.5l8-7.5-8 4.9z"/></svg>
+      </div>
+      <div class="skill-title">Smart Contracts</div>
+      <div class="skill-list">Solidity (learning) · Rust (learning) · Foundry · Hardhat</div>
     </div>
   </div>
 
   <!-- CTA -->
   <div class="cta">
     <h3>Let's talk</h3>
-    <p>Protocol engineering · Smart contracts · On-chain analytics</p>
+    <p>On-chain analytics · Data science in DeFi · Building in crypto</p>
     <a href="mailto:shilpa.rpns@gmail.com" class="cta-btn">Get in touch →</a>
   </div>
 
